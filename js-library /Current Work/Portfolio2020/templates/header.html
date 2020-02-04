@@ -1,0 +1,42 @@
+<div style="width:100vw">
+    <div id="header-left" >
+        <img src="./images/2.png" alt="Leftpic" id="left-pic" >
+       
+    </div>
+    <!-- <div id="center-pic">
+     
+    </div>  -->
+    <div id="header-right" >
+    <h2>
+        <img src="./images/lightmode-pic.png" alt="my-pic" id="center-pic" >
+       
+        class Header{
+            constructor(destination,templateSrc){ //maybe in the future some css  dimensions can come here
+                this.destination = destination
+                this.template = templateSrc
+            }
+        
+            injectIntoHTML(){ 
+               $(this.destination).load(this.template)
+               $.get(this.template,(data)=>{
+                   console.log(data)
+               })
+            }
+        }
+        
+        //ON DOCUMENT READY
+        $(function(){
+        
+            //Creating our header
+            var header = new Header("#header","./templates/header.html")
+            header.injectIntoHTML()
+        })
+           
+            
+        
+        
+        
+
+    </h2>
+    </div>
+</div>

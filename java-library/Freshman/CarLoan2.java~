@@ -1,0 +1,112 @@
+import java.util.Scanner;
+public class PizzaOrder {
+  
+  public static void main(String [] args){
+    
+    Scanner input = new Scanner(System.in);
+    //Topping:
+    String pepperoni = "Pepperoni";
+    String sausage = "Sausage";
+    String veggie = "Veggie";
+    System.out.print("Pizza Order - Select Topping:");
+    System.out.printf("\n1. %s",pepperoni);
+    System.out.printf("\n2. %s",sausage);
+    System.out.printf("\n3. %s\n",veggie);
+    int pizzaNum  = input.nextInt();
+    
+    //Amount of pizza
+    System.out.print("Amount of pizza: ");
+    int amount = input.nextInt();
+    
+    
+    //Billing calculations
+    double price = 0;
+    String topping = "";
+    if(pizzaNum == 1){
+      price = 9.5;
+      topping = pepperoni;
+        
+    }
+    else if(pizzaNum == 2){
+      price = 8.5;
+      topping = sausage;
+    }
+    else if(pizzaNum == 3){
+      price = 7.5;
+      topping = veggie;
+    }
+    else {
+      //?
+    }
+    double subtotal = amount * price;
+    double tax = 0.10 * subtotal;
+    double total = subtotal + tax;
+      
+     //Billing outputs:
+      
+     System.out.printf("Topping: %s",topping);
+     System.out.printf("\nPrice: $%.2f",price);
+     System.out.printf("\nAmount: %d",amount);
+     System.out.printf("\nSubtotal: $%.2f",subtotal);
+     System.out.printf("\nTax: $%.2f",tax);
+     System.out.printf("\nTotal: $%.2f",total);
+  }
+
+}
+
+
+import java.util.Scanner;
+public class CarLoan2 {
+  
+  public static void main(String [] args){
+    
+    Scanner input = new Scanner(System.in);
+    //Vehicle price
+    System.out.print("Enter Vehicle Price: ");
+    double price = input.nextDouble();
+    
+     //Trade in value
+    System.out.print("Enter Trade In Value: ");
+    double tradeInValue = input.nextDouble();
+    
+      //Down Payment
+    System.out.print("Enter Down Payment: ");
+    double downPayment = input.nextDouble();
+    
+      //Term of loan
+    System.out.print("Enter Term of Loan: ");
+    double termOfLoan = input.nextDouble();
+    
+    
+    //Credit Scores:
+    System.out.print("Enter Credit Score: ");
+    int creditScore = input.nextInt();
+    double interestRate = 0;
+    if(creditScore <= 500){
+      interestRate = 0.10;
+    }
+    else if (creditScore<=700){
+      
+      interestRate = 0.5;
+      
+    }
+    else if(creditScore>700){
+      interestRate = 0.3;
+      
+    }
+    
+    //Calculations:
+    double totalPrice  = (price - tradeInValue - downPayment);
+    double grandTotal = totalPrice + (totalPrice*interestRate);
+    double monthlyPayment = (grandTotal / termOfLoan);
+    System.out.printf("Total Price: $%.2f",totalPrice);
+    System.out.printf("\nGrand Total: $%.2f",grandTotal);
+    System.out.printf("\nMonthly Payment: $%.2f",monthlyPayment);
+      
+      
+     
+    
+  }
+  
+  
+}

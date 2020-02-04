@@ -1,0 +1,117 @@
+<!Doctype>
+<html>
+<head>
+    <title>Quiz Time!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h1>Ready for Quiz Time?</h1>
+<p>Let's get started!</p>
+<div id="quiz-container">
+
+    <button id="start-btn">Start Quiz!</button>
+    <h2 id="question-spot"></h2>
+    <h3 id="options-spot"></h3>
+
+
+
+</div>
+
+
+</body>
+<script>
+
+        var questions = [{
+            text:"Who was the last President of the US?",
+            answers:["Michelle Obama", "Melanie Obama", "Barack Obama","Sister Obama"],
+            correctAnswer:"Barack Obama",
+            answer:""
+        },
+        {
+            text:"Who was the last President of France?",
+            answers :["Sabrina Koumoin", "Emmanuel Macron", "Barack Obama","Sister Obama"],
+            correctAnswer: "Emmanuel Macron",
+            answer:""
+        }]
+            
+    
+        function askQuestion(questions,index){
+
+            //Checking that we still have questions to ask
+            if(index > questions.length-1){
+                alert("Quiz is over!")
+                calcScore(questions)
+                return null;    
+            }
+
+            $("#options-spot").html("")
+
+            var question = questions[index]
+            var answers = question.answers
+            var correctAnswer = questions.correctAnswer
+
+            //We ask the question
+            $("#question-spot").text(question.text) 
+            
+            //We prepare the answers to display + add the event listener for the click
+            answers.forEach((item,index)=>{
+                var newOption = $(`<input type="radio" name="option"  value=${item}> ${item} </input>`)
+                newOption.on("click",(e)=>{
+                        question.answer = e.target.value
+                        alert(e.target.value)
+                })
+                $("#options-spot").append(newOption) 
+            })
+       
+        }
+
+
+        function calcScore(questions){
+            alert(JSON.stringify)
+            var points = 0
+            var totalPossible = questions.length
+            questions.forEach((question,index)=>{
+                if(question.correctAnswer == question.answer){
+                    points++
+                }
+                alert(`You got ${points} over ${totalPossible}`)
+            })
+            
+        }
+
+        
+        $("#start-btn").on("click",()=>{
+
+            //We hide the start button
+            $("#start-btn").hide()
+
+            //We ask the quiz questions
+            var index = 0
+            var quizTime = setInterval(askQuestion(questions,index),10000) 
+
+           //We create the next button and append it to DOM
+           var nextButton =  $("<button>").text("Next").on("click",()=>{ //detecting each click
+
+                //We get the value of the response
+                index ++  //to move on to the next question
+                askQuestion(questions,index) //We ask a new question
+             })
+            $("#quiz-container").append(nextButton)
+            
+
+        })
+        
+
+
+  
+
+
+
+
+
+
+
+</script>
+
+</html>

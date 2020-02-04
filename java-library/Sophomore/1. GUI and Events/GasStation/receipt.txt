@@ -1,0 +1,3 @@
+Gas Amount: $100.0
+Car Wash: $Yes
+Total Fee: $110.0

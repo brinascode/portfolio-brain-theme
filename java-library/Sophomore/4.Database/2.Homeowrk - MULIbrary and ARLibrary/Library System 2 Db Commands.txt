@@ -1,0 +1,6 @@
+
+  
+  
+ create table book(isbn char(9) primary key not null, title varchar(50));
+
+  Insert into book values("123456780","Absolute java");

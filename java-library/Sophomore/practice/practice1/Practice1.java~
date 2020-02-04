@@ -1,0 +1,19 @@
+//Imports
+import javax.swing.JFrame;
+
+
+public class Practice1 extends JFrame{
+
+  public Practice1(){
+     super("My awesome practice!");  
+  }
+  
+  
+  public static void main(String [] args){
+  
+    Practice1 app = new Practice1();
+  
+  }
+
+
+}

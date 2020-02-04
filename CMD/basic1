@@ -1,0 +1,57 @@
+GO to Root :
+    --Windows: cd/
+    --MAC: cd\
+
+Make a directory:
+    WIN: mkdir + dir_name
+    MAC: mkdir + dir_name
+
+To go inside the directory:
+    WIN: cd + dir_name/location
+    MAC: cd + dir_name/location
+
+
+Listing files:
+    MAC: ls, 
+        ltrR (to get more details?)
+
+
+df -h(human readable) -k(shows you in kilobytes) --> df is a standard Unix command used to display the amount of available disk space for file systems on which the invoking user has appropriate read access.
+
+
+cat --> to read a file
+
+
+top--> how much CPU you have
+     -n 1 (I only want one instance, don't refresh)
+      Examples:
+        top -n 1 > info.txt (sending the data to a text file)
+        cat info.txt
+
+What's the difference between these two?? if tee is the one making it show on the screen what is the real difference?
+./hi | tee (-> show me on the screen , go to the file. Two directions (like in a T)) hi.txt
+./hi > hi.txt
+    --> what does tee do?
+
+
+history
+     c   --> to clear ! 
+     Ex:
+        history | tail -10 -->  to only show the last 10 lines
+ulimit -a 
+    --maximum memory size is impt
+
+** check image on phone
+
+CHMOD stuff
+CHMOD vs CHOWN
+
+
+
+vi my file
+esc + i --> for insert
+esc the shift + zz --> to save and close
+What about to not save and leave?  
+
+
+cd / --> to the drive

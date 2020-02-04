@@ -1,0 +1,18 @@
+create database mulibrary;
+
+create table book(
+  Isbn varchar(9) primary key not null,
+  Title varchar(25)                 
+)
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

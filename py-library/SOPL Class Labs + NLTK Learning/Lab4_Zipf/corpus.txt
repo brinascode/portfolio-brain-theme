@@ -1,0 +1,16 @@
+ for word in item["full_tweets_text"]:
+           if words[word] and True:
+               words[word] += 1
+           else:
+               words[word] = 1
+
+        print(words)
+
+
+          '''
+           if all_words[word] and True:
+               all_words[word] += 1
+           else:
+               all_words[word] = 1
+
+        print(all_words) '''

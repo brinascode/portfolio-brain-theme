@@ -1,0 +1,47 @@
+show databases;
+
+create database it230;
+
+use student;
+
+show tables; 
+
+drop database it230;
+
+
+create table student (
+    StudentID char(3) primary key not null,
+    FirstName varchar(25), 
+    LastName varchar(30),
+    Year int,
+    Balance double                
+);
+
+describe student;
+
+select studentid from student; 
+
+insert into student values('101','John', 'Doe', 1, 0.00);
+insert into student values('102','Jane', 'Smith', 4, 1000.00);
+insert into student values('103','David', 'Johnson', 4, 500.00);
+insert into student values('104','Aron', 'Smith', 4, 1000.00);
+  
+commit;
+
+select * from student where balance > 0
+
+update student set balance = 750.00 ; 
+
+update student set balance = 750.00 where studentid = "101" ;
+
+select * from student where balance > 0 order by balance desc; 
+select balance from student where balance > 0 order by balance desc; 
+
+
+    Select all from student where 
+      
+      Select firstname, lastname from student where lastname = "Smith" 
+    
+    Select firstname, lastname from student where lastname like "j%"  
+      
+update student set lastname = "Doe" where studentId = "102";

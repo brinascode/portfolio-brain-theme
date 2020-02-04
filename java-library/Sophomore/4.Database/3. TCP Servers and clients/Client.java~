@@ -1,0 +1,59 @@
+import java.net.Socket;
+import java.net.InetAddress;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.Scanner;
+
+import java.net.ServerSocket;
+import java.io.ObjectInputStream;
+
+
+public class Client {
+  
+  //Declare
+  private Socket socket;
+  private ObjectOutputStream outputStream;
+  private Scanner input;
+  
+  private ServerSocket serverSocket;
+  private ObjectInputStream inputStream;
+  
+  
+  public Client() {
+    
+    //Initialize
+    try {
+      serverSocket = new ServerSocket(1099, 500); //Do NOT ever put this in loop...
+      
+      while(true) {
+        socket = new Socket(InetAddress.getByName("localhost"), 1098);
+        //socket = new Socket("10.8.42.210", 1098);
+        input = new Scanner(System.in);
+        
+        String message = input.nextLine(); //package
+        outputStream = new ObjectOutputStream(socket.getOutputStream()); //carrier
+        outputStream.writeObject(message);
+        outputStream.flush();
+        
+        
+        socket = serverSocket.accept();
+        inputStream = new ObjectInputStream(socket.getInputStream());//Display recieved package
+        message = (String) inputStream.readObject();
+        System.out.println("Server says: " + message);
+      }
+    }
+    
+    catch(IOException ioe) {
+      ioe.printStackTrace();
+    }
+    
+    catch(ClassNotFoundException cnfe) {
+      cnfe.printStackTrace();
+    }
+  }
+  
+
+  public static void main(String [] args) {
+    new Client();
+  }
+}

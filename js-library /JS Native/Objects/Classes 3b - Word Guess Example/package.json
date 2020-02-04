@@ -1,0 +1,14 @@
+{
+  "name": "wordguess",
+  "version": "1.0.0",
+  "description": "In this assignment, you will create a Word Guess command-line game using OOP. It is up to you whether you decide to use ES6 class syntax or constructor functions. For the purposes of these instructions, we will use `class` syntax.",
+  "main": "Game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^7.0.3"
+  }
+}

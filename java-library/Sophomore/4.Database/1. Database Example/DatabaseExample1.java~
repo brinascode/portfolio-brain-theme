@@ -1,0 +1,43 @@
+import java.sql.Connection; 
+import java.sql.DriverManager; //package that we use to send information to mySQL
+import java.sql.SQLException;
+
+//What we'll need to execute the commands:
+import java.sql.Statement;
+
+//To connect to a different db, the only thing that would need to change is the protocol and all and the url...
+//You do not need to use multiple try blocks, just use multiple catch
+
+
+public class DatabaseExample1 {
+  public static void main(String [] args){
+    
+   //Connecting to the db
+   String url = "jdbc:mysql://localhost/it230?user=root&password="; //This protocol is for mySQL only.
+   
+   try {
+     Class.forName("com.mysql.jdbc.Driver"); //used to connect to somee packages
+     
+     
+     Connection connection = DriverManager.getConnection(url);
+     System.out.print("Database is connected");
+     
+      //To insert, update, delete, create etc... Any command where you don't need to receive anything in return
+    String insertStatement = "insert into student values(105, 'Sabrina', 'K', 1, 0)";
+    System.out.println(insertStatement);
+    Statement stmt = connection.createStatement();
+    stmt.execute(insertStatement);
+    System.out.print("Inserted Successfully!");
+    
+    
+   }catch(ClassNotFoundException cnfe){
+     cnfe.printStackTrace();
+   }catch(SQLException sqle){
+      sqle.printStackTrace(); //note that you can also write this printStackTrace to a text file :)
+   }
+   
+   
+  
+   
+  }
+} 

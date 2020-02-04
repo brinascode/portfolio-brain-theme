@@ -1,0 +1,61 @@
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
+import java.net.InetAddress;
+import java.io.ObjectOutputStream;
+import java.util.Scanner;
+
+
+public class TCPServer {
+  
+  //Declare
+  private ServerSocket serverSocket;
+  private Socket socket;
+  private ObjectInputStream inputStream;
+  
+  private ObjectOutputStream outputStream;
+  private Scanner input;
+  
+  
+  public TCPServer() {
+    System.out.println("Server is running!!!");
+    
+    
+    
+    //Initialize
+    try {
+    serverSocket = new ServerSocket(1098, 500); //Do NOT ever put this in loop...
+    
+    while(true) {//Loop Statement
+      socket = serverSocket.accept();
+      inputStream = new ObjectInputStream(socket.getInputStream());//Display recieved package
+      String message = (String) inputStream.readObject();
+      System.out.println("Client says: " + message);
+      
+      
+      socket = new Socket(InetAddress.getByName("localhost"), 1099);
+      input = new Scanner(System.in);
+        
+      message = input.nextLine(); //package
+      outputStream = new ObjectOutputStream(socket.getOutputStream()); //carrier
+      outputStream.writeObject(message);
+      outputStream.flush();
+    }
+  }
+    
+    catch(IOException ioe) {
+     ioe.printStackTrace(); 
+    }
+    
+    catch(ClassNotFoundException cnfe) {
+      cnfe.printStackTrace();
+    }
+  }
+  
+  
+  public static void main(String [] args) {
+    new TCPServer();
+  }
+}
