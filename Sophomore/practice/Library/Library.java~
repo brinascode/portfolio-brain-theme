@@ -1,0 +1,20 @@
+
+public class Library {
+  
+  //constructor
+  public Library(){
+   
+    System.out.print("heey");
+  
+  }
+
+
+
+  //main method
+  public static void main(String [] args){
+    
+    Library app = new Library();
+  
+  }
+
+}

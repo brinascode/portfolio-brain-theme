@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class TollFee1{
+  
+  public static void main(String [] args){
+    
+    Scanner input = new Scanner(System.in);
+    
+    //Inputs
+    
+    System.out.print("Enter your first name");
+    String firstName = input.next();
+    System.out.print("\nEnter your last name");
+    String lastName = input.next();
+    System.out.println("\nEnter type of vehicle: \n1.Two Axels \n2.Three or more Axels  \n3.A Motorcycle");
+    int vehicle = input.nextInt();
+    
+    //Conditions (brain):
+    double fee = 0;
+    
+    if(vehicle == 1){
+      fee = 3.00;
+    }else if(vehicle == 2){
+      fee = 4.00;
+    }else if(vehicle == 3){
+      fee = 1.00;
+    }
+    
+    //Outputs:
+    
+    System.out.printf("\nToll fee: $%.2f",fee);
+    System.put.print("\nFee collected by");
+    System.put.print("\nCashier name: Sabrina K.");
+    
+    
+    
+    
+  }
+  
+  
+}

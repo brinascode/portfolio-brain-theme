@@ -1,0 +1,12 @@
+public class LetterOfEmployment {
+  public static void main(String [] args) {
+     System.out.print("Dear Sir or Madam:");
+     System.out.print("\n\nThis letter is to confirm that John Doe is presently employed by ABC Company, in the ");
+     System.out.print("position of Software Developer on a full time basis. John Doe commenced employment with ");
+     System.out.print("company on 01/01/2015 and is presently paid $54590.50 based salary per year.");
+     System.out.print("\n\nABC company is located at 2708 N Glebe Rd, Arlington, VA, 22207.");
+     System.out.print("\n\nIf you require any addtional information about ABC company and/or Mr.Doe, please do not ");
+     System.out.print("hesitate to contact us.\n\nSincerely,\n\n\n");
+  }
+}
+

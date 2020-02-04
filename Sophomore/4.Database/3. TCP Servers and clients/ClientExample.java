@@ -1,0 +1,54 @@
+import java.net.Socket;
+import java.io.ObjectOutputStream;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class ClientExample {
+  
+  //Declare
+  private Socket socket; //declare an actual socket
+  private ObjectOutputStream output; //declare an output stream to send a message
+
+  
+  
+  public ClientExample() {
+    
+    //Initialize
+    try {
+    
+      
+      while(true) {
+        socket = new Socket(InetAddress.getByName("localhost"), 1098);
+        //socket = new Socket("10.8.42.210", 1098);
+        output = new ObjectOutputStream(socket.getOutputStream()); //carrier
+        
+        
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Client says:");
+        String message = scan.nextLine(); //Scanner to type in a message sent to the client (the package being sent)
+        
+        //write buffered output bytes and flush throught to the underlying stream
+        output.writeObject(message);
+        output.flush();
+        System.out.println("Message sent!!!");
+       
+      }
+      
+    }
+    catch(UnknownHostException uhe) {
+      uhe.printStackTrace();
+    }
+    catch(IOException ioe) {
+      ioe.printStackTrace();
+    } 
+    
+    
+  }
+  
+
+  public static void main(String [] args) {
+    new ClientExample();
+  }
+}
