@@ -55,3 +55,33 @@ What about to not save and leave?
 
 
 cd / --> to the drive
+
+ls -ltr --> shows you file size in bytes, not bits
+ls -ltr | grep -i test
+ls -ltr | grep -i how
+grep means to get it
+
+Create --> touch
+Delete --> rm
+Open --> cat
+Close --> 
+Read->>cat
+write --> vr
+append --> echo "finished" >> hw1. cat hw1 >> hw2
+cat hw2 >> hw1
+cat hw2 >> hw1 
+(be careful: cat hw2 > hw1 will overwrite hw1 .
+>hw1  :it will totally make hw1 blank 
+cp hw1 hw1.bak 
+Comes handy in troubleshooting: 
+Seek --> You seek information: cat hw1 | grep -i (means ignore the case. -in numbers the lines) hi      
+Rename: mv hw1 hw9
+
+
+Bin: has the executable files
+etc: has services, like network information
+lib: you need library to run languages like C, java, etc
+usr: user information like home directories
+tmp: for temporary files that you do not care to loose
+
+
