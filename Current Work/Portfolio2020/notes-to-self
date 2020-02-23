@@ -1,0 +1,6 @@
+The index.html is just a skeleton. Content is filled dynamically from the generateSite.js file.
+There, each part of the site is a class (kind of like in React), and each part has its own template as needed
+
+Doing:
+--I am currently working on the console
+-- working on the color schemes --> idk why +,=,{} are not getting colored properly. .txt didnt even work had to change the class name
