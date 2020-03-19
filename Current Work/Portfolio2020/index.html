@@ -3,33 +3,156 @@
     <head>
         <title>Brina's Code</title>
         <meta charset ="UTF-8">
-        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <link rel="stylesheet" type="text/css" href="styles/main.css" >
+        <!-- Font Awesome  <link rel="stylesheet"  href="styles/css/all.css"/>-->
+        <link rel="shortcut icon" type="image/png" href="images/logo-light.png"/>
+        <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="js/generateSite.js"></script>
+        <!-- <script src="js/generateSite.js"></script> -->
     </head>
-    <body>
-         <nav>
-             <h1 id="site-title">Brina's Code</h1>
-         </nav>
-        <header id="header">
-            <div style="width:100vw">
-                    <!-- The colorful art---->
-                    <div id="header-left" > 
-                        <img src="./images/2.png" alt="Leftpic" id="left-pic" >
-                    </div>
-                    <!-- <div id="center-pic"> </div>  -->
-                    <!-- The Visual Studio Code menu-->
-                    <div id="header-right" >
-                        
-                            <!-- The JS console:-->
-                            <img src="./images/lightmode-pic.png" alt="my-pic" id="center-pic" >
-                            <h2><div id="console" style="margin-left:5vw;z-index:10"></div></h2>  
-                        
-                    </div>
-                
+
+    <body style="overflow-x:hidden;">
+
+                                    <!-------------------Navbar--------------------->
+        <nav style="overflow-x:hidden;"> 
+            <h1 id="site-title">
+                <img id="site-logo" src="./images/logo-light.png" width="12%" style="position:relative;bottom:2vw;" class="flip-hover">
+                <a href="http://twitter.com/brinascode"><img src="./images/twitter-icon.png" alt="twitter-icon" width="4.5%" style="position:relative;left:72vw;bottom:7vw" class="social-media-icon" ></a>
+               <a href="http://instagram.com/brinascode"><img src="./images/instagram-icon.png" alt="instagram-icon" width="3%" style="position:relative;left:72vw;bottom:7.5vw" class="social-media-icon"></a>
+           </h1>
+        </nav>
+                                     <!-------------------Header--------------------->
+       
+        <header id="header" class="sticky light" style="overflow-x:hidden;overflow-y:hidden;">           <!-- The 'Editor' menu-->
+            <div id="header-left" class="light-editor">
+                <!-- The JS console:-->
+                <!-- <h2><div id="console"></div></h2>   -->
+                <div id="sim-editor" >
+                    <img src="./images/profile-pic-light.png" alt="my-pic" id="center-pic" width="80%"/>
+                         <span class="det">var <span class="var"> greeting </span> </span> =  <span class="str">"Hi there, welcome !"</span> </br></br>
+                                                             <span class="det">const </span> <span class="var"> aboutMe </span> = { </br>
+                                                            <span class="prop" style="text-indent:10px">name: </span> <span class="str">"Sabrina Koumoin"</span>,</br>
+                                                            <span class="prop">passions: </span>  <span class="str">["Web development","Web Design","Machine Learning"]</span>,</br>
+                                                            <span class="prop">programmingLanguages: </span>  <span class="str">["Javascript","Python","Java"]</span>,</br>
+                                                            </br>
+                                                           
+                                                            <span class="obj">console</span>.<span class="met">log</span><span class="str">("Click my logo at the top for a surprise!")</span></br>
+                                                            </br>
+                                                            <span class="var">//Enjoy your visit</span>
+                </div>    
+            </div>
+            <!-- The colorful art / Right Brain---->
+            <div id="header-right" > 
+                <img  id="right-pic" src="./images/pinkblob.png"  width="190%" />
             </div>
         </header>
-         <div id="viewContainer" style="width:100vw;height:100vh;">
-         </div>
+
+                                                <!-------------------About me--------------------->
+        <section id="about-me" class="niceText sticky light">
+            <section id="about-me-left"  >
+                <div id="about-me-left-top">
+                    <div class="outer-circle" style="float:left;">
+                        <div class="inner-circle">
+                            <section class="circle-content"> 
+                                <h1> About me  </h1> 
+                            </section> 
+                        </div>
+                    </div>
+                    A bunch of text here"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. 
+                    facilis est et expedita distinctio.  facilis est et expedita distinctio.  facilis est et expedita distinctio.  facilis est et expedita distinctio. 
+                </div>
+                <div id="about-me-left-bottom">
+                    <div class="outer-circle" style="float:right;">
+                        <div class="inner-circle">
+                            <section class="circle-content"> 
+                                <h1> Left Brain  </h1> 
+                            </section> 
+                        </div>
+                    </div>
+                    A bunch of text here"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. 
+                    facilis est et expedita distinctio.  facilis est et expedita distinctio.  facilis est et expedita distinctio.  facilis est et expedita distinctio. 
+                </div>
+            </section>
+     
+            <section id="about-me-right" class="light niceText"> 
+                <div id="about-me-right-top">
+                    <div class="outer-circle" style="float:right;">
+                        <div class="inner-circle">
+                            <section class="circle-content"> 
+                                <h1> Right brain </h1> 
+                            </section> 
+                        </div>
+                    </div>
+                    A bunch of text here"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. 
+                    facilis est et expedita distinctio.  facilis est et expedita distinctio.  facilis est et expedita distinctio.  facilis est et expedita distinctio. 
+                </div>
+            </section>
+     </section>
+                                            <!-------------------My Work--------------------->
+     <section id="my-work" class="sticky light">
+        <div id="work-section">
+        </br></br> 
+                <div id="work-flex-container">
+                    <div class="work-flex-item" style="background-image:url('images/items/afribellelanding.png');background-size:100%;background-position:center">
+                       <span class="item-info">
+                           <strong>About</strong>
+                           <i class="fas fa-info-circle">iii</i>
+                       </span>
+                    </div>
+                    <div class="work-flex-item" style="background-image:url('images/items/afribelle.png');background-size:100%;background-position:center">
+                        <span class="item-info">
+                            <strong>About</strong>
+                        </span>
+                    </div>
+               
+                     <div class="work-flex-item" style="background-image:url('images/items/unineeds.png');background-size:100%;background-position:center">
+                        <span class="item-info">
+                            <strong>About</strong>
+                        </span>
+                    </div>
+                   
+                    <div class="work-flex-item" style="background-image:url('images/items/myjournal.jpg');background-size:100%;background-position:center">
+                        <span class="item-info">
+                            <strong>About</strong>
+                        </span>
+                    </div>
+                    <div class="work-flex-item" style="background-image:url('images/items/dressup.jpg');background-size:100%;background-position:center">
+                        <span class="item-info">
+                            <strong>i</strong>
+                        </span>
+                    </div>
+                    <div class="work-flex-item" style="background-image:url('images/items/hangman.jpg');background-size:100%;background-position:center">
+                        <span class="item-info">
+                            <strong>About</strong>
+                        </span>
+                    </div>
+                    <div class="work-flex-item" style="background-image:url('images/items/braintheme.png');background-size:100%;background-position:center">
+                        <span class="item-info">
+                            <strong>About</strong>
+                        </span>
+                    </div>
+                    <div class="work-flex-item" style="background-image:url('images/items/newtheme.png');background-size:100%;background-position:center">
+                        <span class="item-info">
+                            <strong>About</strong>
+                        </span>
+                    </div>
+                        
+                </div>
+        </div>
+        <div class="outer-square">
+            <div  style="position:absolute;top:25%;left:90%;color:black;font-family:Nickainley;font-size:4vw">My Work</div>
+            <div class="border-triangle">
+            </div>
+        </div>
+     </section>
+     
+     <br>
+     <footer style="background-color:black">
+        &copy; 2020 Sabrina Koumoin
+     </footer>
+     
     </body>
 </html>
+
+
+

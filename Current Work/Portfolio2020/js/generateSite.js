@@ -1,7 +1,7 @@
-function color(templateUrl,settingsArr){
+function color(templateUrl,settingsArr){ // Function to color our template words to create a "console" (left side of site)
     return new Promise((resolve,reject)=>{
         var template = ""
-        $.get(templateUrl,(data)=>{
+        $.get(templateUrl,(data)=>{  // We must get the templateUrl: it's a file saved in the templates directory
             template = data
             for(var i=0;i<settingsArr.length;i++){
                 var setting = settingsArr[i]
@@ -17,7 +17,6 @@ function color(templateUrl,settingsArr){
                     })  
                 }
             } 
-            console.log(template)
             resolve(template)
         })
     })
@@ -26,6 +25,7 @@ function color(templateUrl,settingsArr){
 class Header{
     constructor(){
     }
+    
     async createConsole(){
         var settingsArr = [
             {
@@ -60,11 +60,62 @@ class Header{
 
 
 
-//JjQuery starts here:
+// JjQuery starts here:
 $(function(){
     //We create the header
    var header = new Header()
    header.createConsole()
+
+
+   //Theme toggle:
+   var siteLogo = $("#site-logo")
+   var body = $("body")
+   var headerLeft = $("#header-left")
+   var rightPic = $("#right-pic")
+   var centerPic = $("#center-pic")
+
+   var toggle = true
+
+   //Main dividers
+   var header = $("#header")
+   var aboutMe= $("#about-me")
+   var myWork = $("#my-work")
+   var mainDividers = [$("#header"),$("#about-me"),$("#my-work")]
+
+   siteLogo.click(()=>{
+        toggle ? goDark() : goLight()
+        toggle = !toggle
+    })
+   function goDark(){
+        siteLogo.attr("src","./images/logo-dark.png")
+        rightPic.attr("src","./images/pinkblob.png")
+        centerPic.attr("src","./images/profile-pic-dark.png")
+        body.removeClass("light")
+        body.addClass("dark")
+        headerLeft.removeClass("light-editor")
+        // headerLeft.addClass("dark-editor")
+        aboutMe.removeClass("light")
+        aboutMe.addClass("dark")
+
+        mainDividers.forEach((item)=>{item.addClass("dark")})
+
+
+   }
+   function goLight(){
+        siteLogo.attr("src","./images/logo-light.png")
+        rightPic.attr("src","./images/pinkblob.png")
+        centerPic.attr("src","./images/profile-pic-light.png")
+        body.removeClass("dark")
+        body.addClass("light")
+        headerLeft.removeClass("dark-editor")
+        headerLeft.addClass("light-editor")
+        aboutMe.removeClass("dark")
+        aboutMe.addClass("light")
+
+        mainDividers.forEach((item)=>{item.addClass("light")})
+   }
+
+
    
 })
    
