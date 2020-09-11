@@ -11,7 +11,6 @@ import { api } from "../other_important/SharedVars.js"
 import Stripe from "../logged_in/user/Stripe.jsx"
 import {Elements} from "@stripe/react-stripe-js"
 import {loadStripe} from "@stripe/stripe-js"
-const stripePromise = loadStripe('pk_test_JJ1eMdKN0Hp4UFJ6kWXWO4ix00jtXzq5XG');
 
 
 //Needed Blocks
@@ -42,6 +41,8 @@ import ViewMyProducts from "../logged_in/seller/ViewMyProducts.jsx"
 import ViewMyServices from "../logged_in/seller/ViewMyServices.jsx"
 import EditItem from "../logged_in/seller/EditItem.jsx"
 import BuyPage from "../logged_in/buy/buyPage.jsx"
+
+const stripePromise = loadStripe('pk_test_JJ1eMdKN0Hp4UFJ6kWXWO4ix00jtXzq5XG');
 
 
 class UserView  extends React.Component { 

@@ -198,7 +198,7 @@ getStripeInfo(){
 }
 
 createStripeAccount(){
-  window.location.href = "https://connect.stripe.com/express/oauth/authorize?redirect_uri=https://muneeds-backend.herokuapp.com/stripecallback&client_id=ca_FESgSrfC90wvYVVQGBXnvZ79SPJFPs81&state={STATE_VALUE}"
+  window.location.href = api() + "/createStripeConnectedAccount"
 }
 
 viewStripeDashboard(){
