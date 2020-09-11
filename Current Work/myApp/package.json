@@ -1,0 +1,84 @@
+{
+  "name": "myApp",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@capacitor/core": "1.5.1",
+    "@capacitor/ios": "^1.5.1",
+    "@ionic/react": "^5.0.0",
+    "@ionic/react-router": "^5.0.0",
+    "@material-ui/core": "^4.8.1",
+    "@material-ui/icons": "^4.5.1",
+    "@material-ui/system": "^4.9.3",
+    "@projectstorm/react-diagrams": "^6.0.1-beta.7",
+    "@stripe/react-stripe-js": "^1.1.2",
+    "@stripe/stripe-js": "^1.9.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^8.0.3",
+    "@trendmicro/react-buttons": "^1.3.1",
+    "@trendmicro/react-sidenav": "^0.4.5",
+    "@types/jest": "^24.0.25",
+    "@types/node": "^12.12.24",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-router": "^5.1.4",
+    "@types/react-router-dom": "^5.1.3",
+    "ajv-keywords": "^3.4.1",
+    "axios": "^0.18.1",
+    "cloudinary": "^1.18.1",
+    "cloudinary-direct": "^1.0.4",
+    "cloudinary-react": "^1.2.1",
+    "ionicons": "^5.0.0",
+    "qs": "^6.9.1",
+    "react": "^16.12.0",
+    "react-accordion": "^0.1.0",
+    "react-accordion-dropdown": "^1.0.0",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.12.0",
+    "react-dropzone": "^8.2.0",
+    "react-foundation": "^0.9.6",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "3.4.0",
+    "react-scrollable-anchor": "^0.6.1",
+    "react-scrollchor": "^6.0.0",
+    "react-stripe-elements": "^5.1.0",
+    "react-swipeable": "^4.3.2",
+    "react-websocket": "^2.1.0",
+    "socket.io-client": "^2.3.0",
+    "swiper": "^4.5.1",
+    "typescript": "3.7.4",
+    "ws": "^6.2.1"
+  },
+  "scripts": {
+    "start": " PORT=3000 && react-scripts start ",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@capacitor/cli": "1.5.1"
+  },
+  "description": "An Ionic project",
+  "buildpacks": [
+    {
+      "url": "https://github.com/mars/create-react-app-buildpack"
+    }
+  ]
+}

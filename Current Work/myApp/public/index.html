@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+
+                             <!--Stylesheets -->
+   <!-- Bootstrap and foundation    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">-->
+  
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-float.min.css">
+
+   <link rel="stylesheet" href="Stylesheets/foundation.min.css">
+
+    <!-- Some Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Asap+Condensed&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  
+      <!-- AWS for pictures -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1.12.min.js"></script>
+
+    <!-- Stripe library must be loaded here for PCI Compliance-->
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <!-- Swiper Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js" integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs=" crossorigin="anonymous"></script>
+    <script src="js/foundation.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+
+
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>UniNeeds</title>
+
+    <style>
+
+      .swiper-container {
+      width: 600px;
+      height: 300px;
+      }
+
+      @import url("//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css");
+      
+      @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+      @font-face {
+              font-family:moonbold;
+              src:url("%PUBLIC_URL%/fonts/moonbold.ttf");
+        }
+
+        .moonbold {
+
+          font-family:moonbold;
+
+        }
+
+      @font-face {
+        font-family:moon;
+        src:url("%PUBLIC_URL%/fonts/moonregular.otf");
+    }
+
+     @font-face {
+        font-family:moonbold;
+        src:url("%PUBLIC_URL%/fonts/moonbold.otf");
+    }
+
+    @font-face {
+        font-family:moonlight;
+        src:url("%PUBLIC_URL%/fonts/moonlight.otf");
+    }
+
+
+    body {
+      font-family:moonlight;
+      overflow:scroll;
+    }
+
+     h1,h2,h3,h4 {
+
+      font-family:'Nunito';
+      color:black;
+      }
+
+
+      
+
+    a {
+
+      color:black;
+     
+      text-decoration:none;
+
+      } 
+
+      a:hover{
+        text-decoration:none
+      }
+      
+
+      .biggerH1{
+
+      font-size:3.5vw;
+
+      }
+
+    @keyframes welcome-slide-animation {
+        0% {
+          background-image:url('images/welcome_slide/real/happiness.jpeg');
+          background-size:70%;
+          background-position: center;
+          }
+
+          25% {
+          background-image:url('images/welcome_slide/real/redback.jpeg');
+          background-size:90%;
+          background-position: right;
+          }
+
+
+          50% {
+          background-image:url('images/welcome_slide/real/creativegirl.jpeg');
+          background-size:90%;
+          background-position: right;
+          }
+
+
+          75% {
+          background-image:url('images/welcome_slide/real/model.jpeg');
+          background-size:100%;
+          background-position: center;
+          }
+
+        
+          80% {
+          background-image:url('images/welcome_slide/real/bonding.jpg');
+          background-size:100%;
+          background-position: center;
+          }
+         
+          100% {
+          background-image:url('images/welcome_slide/real/needs.jpeg');
+          background-size:100%;
+          background-position: center;
+          }
+
+      }
+
+
+
+      @keyframes gradient-back2-animation {
+
+      0% {
+        background:linear-gradient(to top right,yellow,#02bcd2);
+        }
+
+        50% {
+          background:linear-gradient(to top right,#02bcd2,orange);
+        }
+        100% {
+          background:linear-gradient(to top right,orange,#e8365c);
+        }
+
+      }
+
+      .gradient-back2-animation{
+        animation: gradient-back2-animation;
+        animation-duration: 10s ;
+        background:linear-gradient(to top right,orange,#e8365c);
+      }
+
+      .imageGrow1 :hover{
+          width: "100%",
+         
+      }
+
+      .welcome-slide{
+
+        animation: welcome-slide-animation;
+        animation-duration: 60s ;
+        background-image:url('images/welcome_slide/real/happiness.jpeg');
+        background-size:100%;
+        background-position: center;
+        background-color:"black";
+        background-repeat:"no repeat";
+        
+      }
+
+      .gradient-backpurple{
+        background: linear-gradient(to left,#fc00ff, #00dbde)
+      }
+
+      .gradient-backpurple2{
+        background: linear-gradient(to left,#00dbde,#de0c97 )
+      } 
+      .gradient-backblue {
+        background:linear-gradient(to top right,yellow,#02bcd2);
+      }
+
+      .gradient-calm-sidebar {
+     
+      background-image: linear-gradient(to top right, rgba(0,201,255,1), rgba(146,254,157,1));
+      background-size:50%,100%;
+      background-repeat:no-repeat;
+      }
+
+      .gradient-calm-sidebar-mobile {
+     
+        background-image: linear-gradient(to top right, rgba(0,201,255,1), rgba(146,254,157,1));
+        background-size:100%,100%;
+        background-repeat:no-repeat;
+        }
+
+      .gradient-calm {
+    
+      /*background-image: linear-gradient(to bottom, #37ecba 0%, #72afd3 100%);*/
+      background-image: linear-gradient(to bottom, #37ecba 0%, #72afd3 100%);
+      background-repeat:no-repeat;
+      }
+
+      .gradient-calm2 {
+     
+      background-image: linear-gradient(to top right, rgba(0,201,255,1), rgba(146,254,157,1));
+      background-repeat:no-repeat;
+    }
+
+      .gradient-purple{
+        background-image: linear-gradient(to top right, #b993d6, #8ca6db);
+      }
+
+      .gradient-darkblue {
+        background-image: linear-gradient(to top right, #24c6dc, #514a9d);
+      }
+
+      .gradient-tiles{
+        background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
+      }
+
+      .gradient-smoothpinky{
+        background:linear-gradient(to top right,#fa709a,#fee140);
+       
+       
+      }
+
+      .gradient-sharpwhite{
+        background-image: linear-gradient(to top, #dfe9f3 0%, white 100%); }
+
+      .gradient-pinkykiss{
+        background:linear-gradient(to top right,#ff0844,#ffb199);
+      }
+
+      .gradient-temptingazure{
+          background:linear-gradient(to right,#43e97b,#38f9d7)
+      }
+
+      .buttonFull{
+        background-color:#02bcd2;
+        color:white;
+        font-family:Nunito;
+        font-size:1.8vh;
+        border-radius:5px;
+        padding:1vw;
+      }
+     
+      .gradient-backpinky {
+        background:linear-gradient(to top right,#8a2387,#e94057,#f27121);
+     
+      }
+
+      
+
+
+      .gradient-back-clear{
+        background: #f2f9fc;
+      }
+
+      .gradient-backyellow {
+        background:linear-gradient(to top right,#00c3ff,#ffff1c);
+       
+      }
+      .warm-orange-gradient{
+        background:linear-gradient(to top right,orange,#e8365c);
+       
+      }
+
+      .gradient-back22 {
+        background:linear-gradient(to top right,#00c9ff,  #92fe9d );
+       
+      }
+
+      .gradientHover :hover{
+        background:linear-gradient(to top right,#00c3ff,#ffff1c);
+      }
+
+
+
+      #root{
+
+          width:100%;
+        
+          padding:0vw;
+          margin:0vw;
+         
+        
+      }
+
+      .grow-on-hover :hover{
+        width:200%
+      }
+      
+      input#search{
+    background-image: url("/images/icons/search.png");
+    background-size:5%;
+    background-position:right;
+    background-repeat: no-repeat;
+    text-indent: 20px;
+    }
+
+    input#search:focus{
+    background-image:none;
+    }
+
+    .blue-button{
+      background-color:"#02bcd2";
+      border-radius:"5px";
+      padding:"1vw"
+    }
+   
+    </style>
+
+
+  </head>
+
+  <body 
+  style="width:100vw;color:black" >
+        <noscript>
+          You need to enable JavaScript to run this app.
+        </noscript>
+      
+        <div id="root"  style="width:100%;overflow-x:hidden" >
+          
+        </div>
+
+
+        <script>
+
+          //For swiper
+            var mySwiper = new Swiper ('.swiper-container', {
+              // Optional parameters
+              direction: 'horizontal',
+              loop: true,
+          
+              // If we need pagination
+              pagination: {
+                el: '.swiper-pagination',
+              },
+          
+              // Navigation arrows
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+          
+              // And if we need scrollbar
+              scrollbar: {
+                el: '.swiper-scrollbar',
+              },
+            })
+
+
+            </script>
+  </body>
+
+
+</html>
