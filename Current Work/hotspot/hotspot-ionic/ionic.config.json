@@ -1,0 +1,7 @@
+{
+  "name": "hotspot-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

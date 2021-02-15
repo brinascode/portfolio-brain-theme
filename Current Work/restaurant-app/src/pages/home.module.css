@@ -1,0 +1,39 @@
+    .banner {
+        background-size:100% 250%;
+        background-repeat:no-repeat;
+        background-position:center;
+        /* height:100%; */
+        animation:banner-slider 10s infinite ;
+        margin:auto;
+        padding:auto;
+         height:30vw;
+
+    }
+
+   
+
+@keyframes banner-slider{
+    0%{
+        background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
+    }
+
+    50%{
+        background-image:url('https://images.unsplash.com/photo-1494390248081-4e521a5940db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1595&q=80')
+    }
+
+     100%{
+        background-image:url('https://images.unsplash.com/photo-1567778744680-eb44ae7aa09b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80')
+    }
+}
+
+@media only screen and (max-width:500px){
+    .banner-container-style {
+        height:40vh;
+        /* border:solid pink */
+    }
+
+    .banner-style  {
+        background-size:100% 250%;
+        height:100%
+    }
+}
